@@ -137,7 +137,7 @@ app.use(function timeLog(req, res, next) {
   var i = config.allowedIp.indexOf(req.ip);
   if (i < 0) {
     res.statusCode = 403;
-    res.send('Вам не разрешено передавать сообщения');
+    res.send('<div style="text-align: center">Вам не разрешено передавать сообщения</div>');
     console.log('Попытка передачи сообщения с IP адреса: ' + req.ip);
   } else {
     next();

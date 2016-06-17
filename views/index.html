@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Send Message</title>
@@ -21,9 +21,12 @@
     
     </select>
 
-    <input type="text" name="message" size="80" placeholder="Введите сообщение" required><input type="submit"><br>
-    <a href="/log">Лог работы системы.</a>
-    </div><br>
+    <input type="text" name="message" size="80" placeholder="Введите сообщение" required><input type="submit">
+    <br/>
+    <div>Подключенных пользователей: {{sockets.length}}</div>
+    <br/>
+    <div><a href="/log">Лог работы системы.</a></div>
+    </div>
 </form>
 
 
