@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send Message</title>
+</head>
+
+<body>
+ <form method="post" enctype="application/x-www-form-urlencoded" action="/message">
+    <div style="text-align: center">
+    
+    <select name="groupOrIpAdres">
+
+    {% for group in groups %}
+    <option value="{{group}}">Группа: {{group}}</option>
+    {% endfor %}
+
+    {% for socket in sockets %}
+    <option value="{{socket.remoteAddress}}">{{socket.remoteAddress.slice(7)}}</option>
+    {% endfor %}
+    
+    </select>
+
+    <input type="text" name="message" size="80" placeholder="Введите сообщение" required><input type="submit"><br>
+    <a href="/log">Лог работы системы.</a>
+    </div><br>
+</form>
+
+
+</body>
+
+</html>
